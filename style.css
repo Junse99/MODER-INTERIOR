@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@100;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@100;200&display=swap');
+
+body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat';
+  background-color: #181719;
+  color: #fff;
+  margin: 0 1rem;
+}
+
+.container{
+  max-width: 1200px;
+  margin: auto;
+
+}
+
+.header{
+  display: flex;
+  width: 100%;
+}
+
+.header__logo{
+  flex: 1;
+  margin: auto 0;
+}
+
+.header__logo p{
+  font-family: 'Crimson Pro';
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 16px;
+  border: 1px solid #fff;
+  display: inline;
+  padding: .5rem;
+
+}
+
+.header__list ul{
+  list-style: none;
+}
+
+.list-item {
+  position: relative;
+  display: inline-block;
+  margin: 2rem;
+  padding: 5px;
+  cursor: pointer;
+
+}
+
+.list-item::after {
+  position: absolute;
+  content:'';
+  width: 0%;
+  bottom: 0%;
+  left: 50%;
+  border-bottom: 2px solid #fff;
+  transition: all ease-in-out .5s;
+}
+
+.list-item:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.list-item:last-child{
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.btn-menu{
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+.main{
+  display: grid;
+  grid-template-columns: 40% 60%;
+  padding: 5% 0 20% 0;
+}
+
+.main__aside{
+  position: relative;
+}
+
+.main__aside img{
+  width: 100%;
+
+}
+
+.main__card{
+  position: absolute;
+  bottom: -20%;
+  left: 40%;
+  width: 50%;
+  height: 30%;
+  padding: 1rem;
+  background-color: #181719;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.main__card--perfil{
+  display: flex;
+align-items: center;
+}
+
+.main__card--perfil img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.perfil-rigth{
+  margin-left: 1rem;
+}
+
+.perfil-rigth h2{
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+}
+
+.perfil-rigth p{
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.creator {
+  font-family: Lora;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 31px;
+  width: 80%;
+  margin: 1rem 0;
+}
+
+.main__info{
+  padding-right: 1rem;
+margin: auto;
+}
+
+.main__info h1{
+  font-family: Lora;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 61px;
+}
+
+.main__info p{
+  width: 90%;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 29px;
+  font-style: normal;
+}
+
+.main__info a{
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.container__footer p{
+  padding: 2rem;
+  font-size: 14px;
+  color: #A9A9A9;
+  text-align: center;
+}
+
+.container__footer p b {
+  text-decoration: underline;
+}
+
+ul.show{
+  top: 0 ;
+}
+
+@media (max-width: 900px){
+
+  .container{
+    margin-top: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+   
+  }
+  .main{
+    grid-template-columns: 1fr;
+  }
+
+  .main__info h1{
+    font-size: 36px;
+  }
+
+  .main__info p{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+  }
+
+  .main__aside{
+    margin-top: 2rem;
+  }
+  .main__card{
+    left: 13%;
+    bottom: -30%;
+    width: 75%;
+    height: 45%;
+  }
+
+  .creator {
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23px;
+  }
+
+  .btn-menu{
+    display: inline-flex;
+    position: relative;
+    z-index: 5;
+}
+
+  .list {
+    position: absolute;
+    width: 100vw;
+    z-index: 1;
+    top: -100vh;
+    left: 0;
+    height: 100vh;
+    background-color: #181719;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    transition: all .4s;
+    /*display: none;*/
+  }
+
+  .header__list ul {
+    text-align: center;
+
+    padding: 0;
+    margin: 0;
+  }
+
+  .list-item {
+    display: block;
+    text-align: center  ;
+    
+  }
+
+  .list-item:last-child{
+    margin: 2rem;
+    padding: 5px;
+  }
+.container__footer{
+  margin-top: 10vh;
+}
+  .container__footer p{
+    padding: 1rem;
+  }
+  
+}
+
+
+
+
+
+
